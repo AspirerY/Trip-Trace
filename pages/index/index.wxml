@@ -1,0 +1,21 @@
+<!--index.wxml-->
+<view class="map_container"> 
+  <map class="map" id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="{{mapScale}}" show-location="true">
+      <cover-view class='check_button' bindtap='checkHandler'>签到</cover-view>
+
+      <!-- <cover-view class='scale_button_wrapper'>
+        <cover-view class='scale_button' bindtap='zoomIn'>+</cover-view>
+        <cover-view class='scale_separate'></cover-view>
+        <cover-view class='scale_button' bindtap='zoomOut'>-</cover-view>
+      </cover-view> -->
+
+      <cover-view class='user_info' bindtap='checkUserInfo'>
+        <cover-image src='../../img/userInfo.png'></cover-image>
+      </cover-view>
+
+      <cover-view class='location' bindtap='locate'>
+        <cover-image src='../../img/locate.png'></cover-image>
+      </cover-view>
+  </map> 
+</view>
+

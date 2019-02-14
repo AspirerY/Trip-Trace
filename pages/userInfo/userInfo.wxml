@@ -1,0 +1,13 @@
+<view class='userinfo_container'>
+  <view class='userinfo_header'>
+    <!-- <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+    <text>{{userInfo.nickName}}</text> -->
+    <view class='userinfo_avatar'><open-data type='userAvatarUrl'></open-data></view>
+    <view class='userinfo_nickname'><open-data type='userNickName'></open-data></view>
+  </view>
+  <view class='button_bar_wrapper'>
+    <view class='button_bar' bindtap='checkMyTrack'>
+      <text>我的足迹</text><text>></text>
+    </view>
+  </view>
+</view>

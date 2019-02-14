@@ -1,0 +1,85 @@
+page {
+  height: 100%;
+}
+.map_container{ 
+  height: 100%; 
+  width: 100%; 
+} 
+
+.map { 
+  height: 100%; 
+  width: 100%; 
+} 
+
+.check_button {
+  position: absolute;
+  /* left: 20px; */
+  /* top: 20px; */
+  left: calc(50% - 50px);
+  bottom: 60px;
+  height: 40px;
+  width: 100px;
+  line-height: 40px;
+  background: #ff5722;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 5px;
+  font-family: 'MicrosoftYaHei';
+  font-size: 16px;
+}
+
+.scale_button_wrapper {
+  position:absolute;
+  width:32px;
+  height:65px;
+  background:#ffffff;
+  right:20px;
+  bottom:25px;
+  border: 1px solid #d2d2d2;
+  border-radius: 5px;
+}
+.scale_separate {
+  height: 1px;
+  background: #d2d2d2;
+}
+.scale_button {
+  height:32px;
+  line-height: 30px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.user_info {
+  position: absolute;
+  right: 20px;
+  /* top: 15px; */
+  bottom: 60px;
+  width: 40px;
+  height: 40px;
+  background: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.user_info cover-image {
+  width: 75%;
+  height: 75%;
+}
+
+.location {
+  position: absolute;
+  left: 10px;
+  bottom: 60px;
+  height: 40px;
+  width: 40px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.location cover-image {
+  width: 75%;
+  height: 75%;
+}

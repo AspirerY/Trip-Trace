@@ -1,0 +1,5 @@
+<view class='my_track_wrapper'>
+  <map class='my_track_map' id='my_track_map' latitude='{{latitude}}' longitude='{{longitude}}' scale='{{initialScale}}' markers='{{myTrackData}}'>
+    
+  </map>
+</view>
