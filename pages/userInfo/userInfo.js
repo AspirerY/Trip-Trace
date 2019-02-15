@@ -1,10 +1,6 @@
 const app = getApp();
 const util = require('../../utils/util.js');
 
-// 引入腾讯地图AOI
-var QQMapWX = require('../../libs/qqmap-wx-jssdk1.0/qqmap-wx-jssdk.js');
-var qqmapsdk;
-
 Page({
   data: {
     userInfo: {},
@@ -37,10 +33,6 @@ Page({
         }
       })
     }
-
-    qqmapsdk = new QQMapWX({
-      key: '5WEBZ-JNRCJ-TM7FP-FIL4Y-KLTO6-V6FLS'
-    });
   },
   checkMyTrack: function() {
     var userId = app.globalData.openId;
@@ -101,13 +93,18 @@ Page({
     });
     
     var result = Object.keys(provinceData).map(provinceName => {
-      provinceName = this.formatProvinceName(provinceName);
+      var formattedProvinceName = this.formatProvinceName(provinceName);
       return {
-        name: provinceName,
-        dayCount: provinceData[provinceName]
+        name: formattedProvinceName,
+        value: provinceData[provinceName],
+        itemStyle: {
+          normal: {
+            areaColor: '#f00'
+          }
+        }
       }
     });
-    // console.log(result);
+    // console.log("result",result);
     return result;
   },
   formatProvinceName: function(provinceName) {

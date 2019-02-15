@@ -1,3 +1,9 @@
-<view class="container">
-  <ec-canvas id="mychart-dom-area" canvas-id="mychart-area" ec="{{ ec }}"></ec-canvas>
+<view class='echarts_page'>
+  <view class="container">
+    <ec-canvas id="mychart-dom-area" canvas-id="mychart-area" ec="{{ ec }}"></ec-canvas>
+  </view>
+  <view class='button_wrapper'>
+    <button bindtap='saveAsImg'>保存为图片</button>
+    <!-- <button>分享给朋友</button> -->
+  </view>
 </view>
