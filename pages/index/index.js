@@ -83,7 +83,7 @@ Page({
   },
   saveCheckDataToDB: function (checkData) {
     wx.request({
-      url: 'http://47.92.252.164/trip-track/SaveCheckInfo',
+      url: 'https://yuanguoxin.com/trip-track/SaveCheckInfo',
       data: checkData,
       method: 'GET',
       success: (res) => {

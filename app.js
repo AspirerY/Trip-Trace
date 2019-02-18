@@ -14,7 +14,7 @@ App({
         // console.log(res.code);
         if (res.code) {
           wx.request({
-            url: 'http://47.92.252.164/trip-track/GetOpenId?jsCode=' + res.code,
+            url: 'https://yuanguoxin.com/trip-track/GetOpenId?jsCode=' + res.code,
             success: function (openRes) {
               // console.log("openRes",openRes);
 

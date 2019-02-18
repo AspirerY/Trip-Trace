@@ -38,13 +38,13 @@ Page({
     var userId = app.globalData.openId;
     var that = this;
     wx.request({
-      url: 'http://47.92.252.164/trip-track/CheckMyTrack',
+      url: 'https://yuanguoxin.com/trip-track/CheckMyTrack',
       data: {
         userId: userId
       },
       method: 'GET',
       success: (res) => {
-        // console.log(res);
+        // console.log("后台取到足迹信息",res);
         var data = res.data;
         if(data) {
           app.globalData.myTrackData = that.trackDataHandler(data);
@@ -83,7 +83,7 @@ Page({
     
     var provinceData = {};
     data.forEach(dataItem => {
-      var province = dataItem.province;
+      var province = this.formatProvinceName(dataItem.province);
       if (provinceData[province]) {
         provinceData[province] += 1;
       }
@@ -93,9 +93,8 @@ Page({
     });
     
     var result = Object.keys(provinceData).map(provinceName => {
-      var formattedProvinceName = this.formatProvinceName(provinceName);
       return {
-        name: formattedProvinceName,
+        name: provinceName,
         value: provinceData[provinceName],
         itemStyle: {
           normal: {
